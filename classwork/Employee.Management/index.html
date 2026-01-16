@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="./sytle.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Employee Management</h2>
+
+    <div class="form-column">
+        <input type="hidden" id="editId">
+    
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="number" id="age" placeholder="Age">
+        <input type="number" id="price" placeholder="Price">
+    
+        <button onclick="addEmployee()">Add Employee</button>
+    </div>
+    
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+    </table>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

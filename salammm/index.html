@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #5fe3d4, #5a8dee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .todo-card {
+      background: #ffffff;
+      width: 380px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .todo-card h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .add-btn {
+      width: 44px;
+      border-radius: 6px;
+      border: none;
+      background: #8e44fd;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer span {
+      color: red;
+      font-weight: bold;
+    }
+
+    .clear-btn {
+      background: #8e44fd;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="todo-card">
+    <h2>Todo App</h2>
+
+    <div class="input-group">
+      <input type="text" placeholder="Add your new todo">
+      <button class="add-btn">+</button>
+    </div>
+
+    <div class="footer">
+      <p>You have <span>no</span> pending tasks</p>
+      <button class="clear-btn">Clear All</button>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo App</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#5fe3d4,#5a8dee);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.todo-card{
+  background:#fff;
+  width:380px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.todo-card h2{
+  margin-bottom:15px;
+}
+
+/* input */
+.input-group{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.input-group input{
+  flex:1;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.add-btn{
+  width:44px;
+  border:none;
+  border-radius:6px;
+  background:#8e44fd;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* list */
+.todo-list{
+  list-style:none;
+  margin-bottom:15px;
+}
+
+.todo-list li{
+  background:#f2f2f2;
+  padding:10px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+
+.todo-text.done{
+  text-decoration:line-through;
+  color:gray;
+}
+
+.actions{
+  display:flex;
+  gap:6px;
+}
+
+.actions button{
+  border:none;
+  padding:6px 8px;
+  border-radius:5px;
+  cursor:pointer;
+  color:#fff;
+}
+
+.done-btn{ background:#3b82f6; }
+.delete-btn{ background:#ef4444; }
+.edit-btn{ background:#f59e0b; }
+
+/* footer */
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer span{
+  color:red;
+  font-weight:bold;
+}
+
+.clear-btn{
+  border:none;
+  background:#8e44fd;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+
+    .card {
+      background: white;
+      width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .input-box {
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .add-btn {
+      background: #8e44ad;
+      color: white;
+      border: none;
+      padding: 0 16px;
+      border-radius: 6px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    li {
+      background: #f2f2f2;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    li.done span {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .actions button {
+      border: none;
+      margin-left: 6px;
+      padding: 6px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .check {
+      background: #3498db;
+      color: white;
+    }
+
+    .delete {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .edit {
+      background: #f1c40f;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .clear {
+      background: #8e44ad;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Todo App</h2>
+
+    <div class="input-box">
+      <input type="text" id="todoInput" placeholder="Task yaz...">
+      <button class="add-btn" onclick="addTodo()">+</button>
+    </div>
+
+    <ul id="list"></ul>
+
+    <div class="footer">
+      <span id="count">You have 0 pending tasks</span>
+      <button class="clear" onclick="clearAll()">Clear All</button>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById("todoInput");
+    const list = document.getElementById("list");
+    const count = document.getElementById("count");
+
+    function addTodo() {
+      if (input.value.trim() === "") return;
+
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <span>${input.value}</span>
+        <div class="actions">
+          <button class="check" onclick="toggleDone(this)">✔</button>
+          <button class="delete" onclick="removeTodo(this)">🗑</button>
+          <button class="edit" onclick="editTodo(this)">✏</button>
+        </div>
+      `;
+
+      list.appendChild(li);
+      input.value = "";
+      updateCount();
+    }
+
+    function removeTodo(btn) {
+      btn.closest("li").remove();
+      updateCount();
+    }
+
+    function toggleDone(btn) {
+      btn.closest("li").classList.toggle("done");
+      updateCount();
+    }
+
+    function editTodo(btn) {
+      const span = btn.closest("li").querySelector("span");
+      const newText = prompt("Edit task:", span.innerText);
+      if (newText !== null && newText.trim() !== "") {
+        span.innerText = newText;
+      }
+    }
+
+    function clearAll() {
+      list.innerHTML = "";
+      updateCount();
+    }
+
+    function updateCount() {
+      const pending = [...list.children].filter(
+        li => !li.classList.contains("done")
+      ).length;
+
+      count.innerText = `You have ${pending} pending tasks`;
+    }
+  </script>
+
+</body>
+</html>
