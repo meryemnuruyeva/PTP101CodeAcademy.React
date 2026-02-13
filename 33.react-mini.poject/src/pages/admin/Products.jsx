@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProducts, getProductById, createProduct , updateProduct , deleteProduct  } from "../../services/productService";
+import { getProducts, createProduct, deleteProduct } from "../../services/productService";
 import { Formik, Form, Field } from "formik";
 import { productSchema } from "../../validation/productSchema";
 
@@ -14,6 +14,10 @@ const AdminProducts = () => {
   useEffect(() => {
     fetch();
   }, []);
+
+  const addProduct = async (values) => {
+    await createProduct(values);
+  };
 
   return (
     <div className="p-5">

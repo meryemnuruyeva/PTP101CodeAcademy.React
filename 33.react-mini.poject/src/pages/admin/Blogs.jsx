@@ -1,12 +1,6 @@
-import React from "react";
-import AdminProducts from "./Products";
-import { Formik, From, Field } from "formik";
-import React from 'react'
 import React, { useState, useEffect } from "react";
-import { getBlogs, createBlog, deleteBlog } from "../../services/blogSchema";
-
-
-
+import { getBlogs, createBlog, deleteBlog } from "../../services/blogService";
+import { Formik, Form, Field } from "formik";
 
 const AdminBlog = () => {
     const [blogs, setBlogs] = useState([]);

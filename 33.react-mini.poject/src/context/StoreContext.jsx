@@ -1,21 +1,26 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
-export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
+export const StoreContext = createContext();
+
+
+export const StoreProvider = ({ children }) => {
+
   const [cart, setCart] = useState(() => {
-    const storedCart = localStorage.getItem("cart");
-    return storedCart ? JSON.parse(storedCart) : [];
+    const stored = localStorage.getItem("cart");
+    return stored ? JSON.parse(stored) : [];
   });
 
   const [wishlist, setWishlist] = useState(() => {
-    const storedWishlist = localStorage.getItem("wishlist");
-    return storedWishlist ? JSON.parse(storedWishlist) : [];
+    const stored = localStorage.getItem("wishlist");
+    return stored ? JSON.parse(stored) : [];
   });
+
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
 
   useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
@@ -29,6 +34,11 @@ export const CartProvider = ({ children }) => {
     setCart((prev) => prev.filter((p) => p.id !== id));
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
+
   const addToWishlist = (product) => {
     setWishlist((prev) => [...prev, product]);
   };
@@ -38,10 +48,19 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider
-      value={{ cart, wishlist, addToCart, removeFromCart, addToWishlist, removeFromWishlist }}
+    <StoreContext.Provider
+      value={{
+        cart,
+        wishlist,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        addToWishlist,
+        removeFromWishlist,
+      }}
     >
       {children}
-    </CartContext.Provider>
+    </StoreContext.Provider>
   );
 };
+

@@ -1,6 +1,5 @@
-import React from 'react'
-import AdminProducts from './Products'
-
+import React from "react";
+import AdminProducts from "./Products";
 
 const Dashboard = () => {
     return (
